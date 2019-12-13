@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+    <title>BlackJack</title>
+</head>
+<body>
+    <section class='container'>
+        <!-- Title goes here -->
+        <div class='d-flex justify-content-center'>
+            <div  id='title' class='d-inline-flex jumbotron'>
+                <h1>Give me BlackJack!</h1>
+            </div>
+        </div>
+        <!-- Make instructions and basic objectives to the game  -->
+        <div class='d-flex justify-content-center'>
+            <div id='instructions' class='d-inline-flex'>
+                <p class='text-center'>Press the <span>BET</span> button to start the game. After start, the dealer will give you <span>2 cards</span>. Your objective is to have both of your cards values as close as equal to 21 or be greater than the <span>Dealers</span> cards. If you want to add another card to increase you value, press the <span>HIT</span> button to be delt another card, but be careful because if you go over 21, you lose immediately!!! </p>
+            </div>
+        </div>
+    </section>
+    <!-- Need to Display the deck of cards and make a spot for the players cards and the dealers cards to compare-->
+        <div id='decks' class='d-flex justify-content-space-between'>
+            <!-- PLAYER COLUMN -->
+            <div class='container d-flex flex-column justify-content-between text-center'>
+                <div class="d-flex justify-content-center">
+                    <h3>PLAYER</h3>
+                </div>
+                <div class="d-flex justify-content-center flex-column">
+                    <!-- PLAYER CARDS -->
+                    <div class="d-flex justify-content-center flex-md-fill">
+                        <img id="play-1" src="playingCards/2C.jpg" alt="Responsive image">
+                        <img id="play-2" src="playingCards/QH.jpg" alt="Responsive image">
+                    </div>
+                    <h3 id='play-mess' class="message">YOU BUSTED!</h3>
+                    <h3 id="play-count"><strong>21</strong></h3>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <button id="hit" class="button btn btn-lg btn-dark btn-block disabled">HIT</button>
+                    </div>
+                    <div>
+                        <button id="stay" class="button btn btn-secondary btn-lg btn-block disabled" >STAY</button>
+                    </div>     
+                </div>
+            </div>
+            <!-- div containing MAIN DECK COLUMN -->
+            <div class='container d-flex flex-column justify-content-between'>
+                <div class="d-flex justify-content-center">
+                    <img src="/playingCards/backImage.webp" alt="Responsive image">
+                </div>
+                <div class="d-flex justify-content-center bet">
+                    <button id="bet5" class="button btn-large btn-info">BET $5</button>
+                    <button id="bet10" class="button btn-large btn-danger">BET $10</button>
+                </div>
+                <h3>CURRENT BET: <span id="bet-amount"></span></h3>
+                <h3 class="d-flex justify-content-center">CHIPS REMAINING: <span id="balance">$100</span></h3>
+            </div>
+             <!-- div containing DEALER COLUMN -->
+            <div class='container d-flex flex-column justify-content-between text-center'>
+                <div>
+                    <h3>DEALER</h3>
+                </div>
+                <!-- DEALER CARDS, WIN/BUST/LOSE MESSAGE AND TOTAL -->
+                <div id="dealer" class="d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-center">
+                            <img id="play-1" src="/playingCards/KS.jpg" alt="Responsive image">
+                            <img id="play-2" src="/playingCards/AH.jpg" alt="Responsive image">
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <h3 id='deal-mess' class="message">DEALER WINS!!</h3>
+                        <h3 id="deal-count"><strong>22</strong></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Show total value of players cards and dealers cards -->
+<img src="" alt="">
+    <!-- Make a deal button and a 'hit me' and 'stay' button for controls -->
+
+
+
+</div>
+</html>
