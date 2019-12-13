@@ -26,52 +26,57 @@
     </section>
     <!-- Need to Display the deck of cards and make a spot for the players cards and the dealers cards to compare-->
         <div id='decks' class='d-flex justify-content-space-between'>
+
             <!-- PLAYER COLUMN -->
             <div class='container d-flex flex-column justify-content-between text-center'>
                 <div class="d-flex justify-content-center">
                     <h3>PLAYER</h3>
                 </div>
                 <div class="d-flex justify-content-center flex-column">
+
                     <!-- PLAYER CARDS -->
                     <div class="d-flex justify-content-center flex-md-fill">
-                        <img id="play-1" src="playingCards/2C.jpg" alt="Responsive image">
-                        <img id="play-2" src="playingCards/QH.jpg" alt="Responsive image">
+                        <img id="play-1" src="/playingCards/backImage.webp" alt="Responsive image">
+                        <img id="play-2" src="/playingCards/backImage.webp" alt="Responsive image">
                     </div>
                     <h3 id='play-mess' class="message">YOU BUSTED!</h3>
                     <h3 id="play-count"><strong>21</strong></h3>
                 </div>
                 <div class="d-flex justify-content-around">
                     <div>
-                        <button id="hit" class="button btn btn-lg btn-dark btn-block disabled">HIT</button>
+                        <button id="hit" class="button btn btn-lg btn-dark btn-block">HIT</button>
                     </div>
                     <div>
-                        <button id="stay" class="button btn btn-secondary btn-lg btn-block disabled" >STAY</button>
+                        <button id="stay" class="button btn btn-secondary btn-lg btn-block">STAY</button>
                     </div>     
                 </div>
             </div>
+
             <!-- div containing MAIN DECK COLUMN -->
             <div class='container d-flex flex-column justify-content-between'>
                 <div class="d-flex justify-content-center">
                     <img src="/playingCards/backImage.webp" alt="Responsive image">
                 </div>
                 <div class="d-flex justify-content-center bet">
-                    <button id="bet5" class="button btn-large btn-info">BET $5</button>
-                    <button id="bet10" class="button btn-large btn-danger">BET $10</button>
+                    <button id="bet5" class="button btn btn-large btn-info">BET $5</button>
+                    <button id="bet10" class="button btn btn-large btn-danger">BET $10</button>
                 </div>
                 <h3>CURRENT BET: <span id="bet-amount"></span></h3>
                 <h3 class="d-flex justify-content-center">CHIPS REMAINING: <span id="balance">$100</span></h3>
             </div>
+
              <!-- div containing DEALER COLUMN -->
             <div class='container d-flex flex-column justify-content-between text-center'>
                 <div>
                     <h3>DEALER</h3>
                 </div>
                 <!-- DEALER CARDS, WIN/BUST/LOSE MESSAGE AND TOTAL -->
+
                 <div id="dealer" class="d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-center">
-                            <img id="play-1" src="/playingCards/KS.jpg" alt="Responsive image">
-                            <img id="play-2" src="/playingCards/AH.jpg" alt="Responsive image">
+                            <img id="deal-1" src="/playingCards/backImage.webp" alt="Responsive image">
+                            <img id="deal-2" src="/playingCards/backImage.webp" alt="Responsive image">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                         <h3 id='deal-mess' class="message">DEALER WINS!!</h3>

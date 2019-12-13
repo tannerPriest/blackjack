@@ -1,5 +1,4 @@
-console.log('Connected');
-const deck = [
+export const deck = [
     {
         value: 2,
         image: 'playingCards/2C.jpg'
@@ -213,69 +212,3 @@ const deck = [
         image: 'playingCards/QS.jpg'
     }
 ];
-console.log(deck[40].image);
-
-let currentBet = '';
-let balance    = 100;
-let inTurn = false;
-let playHand = [];
-let dealerHand = [];
-
-const playTwo = document.getElementById('play-2');
-const playOne = document.getElementById('play-1');
-const dealerOne = document.getElementById('deal-1');
-const dealerTwo = document.getElementById('deal-2');
-const stayB = document.getElementById('stay');
-const hitB = document.getElementById('hit');
-const betFive = document.querySelector('#bet5');
-const betTen = document.querySelector('#bet10');
-
-stayB.disabled = true;
-hitB.disabled = true;
-const noClick = document.createAttribute("disabled")
-
-const init = () => {
-    currentBet = ''
-    balance = 100
-    document.querySelectorAll('img').src = '/playingCards/backImage.webp';
-    betFive.disabled = false;
-    betTen.disabled = false;
-    stayB.disabled = true;
-    hitB.disabled = true;
-}
-
-betFive.addEventListener("click", function(){
-    currentBet = 5;
-    balance -= 5;
-    stayB.disabled = false;
-    hitB.disabled = false;
-    inTurn = true
-    deal();
-    render();
-});
-betTen.addEventListener("click", function(){
-    currentBet = 10;
-    balance -= 10;
-    stayB.disabled = false;
-    hitB.disabled = false;
-    inTurn = true;
-    deal();
-    render();
-});
-
-function deal(){
-    let x = deck[Math.floor(Math.random() * deck.length)]
-}
-
-function render(){
-    betTen.disabled = true;
-    betFive.disabled = true;
-    document.querySelector('#bet-amount').textContent = `$${currentBet}`;
-    document.querySelector('#balance').textContent = `$${balance}`;
-}
-hitB.addEventListener('click', function(){
-
-});
-stayB.addEventListener('click', function(){
-});
-
