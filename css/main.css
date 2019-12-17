@@ -1,21 +1,28 @@
-body{
+body {
     height: 100vh;
     margin: 0;
     background-color: #5ba754;
 }
-img{
+img {
     height: 300px;
-    margin:  20px;
     border-radius: 15px;
 }
-section{
+section {
     margin-bottom: 10px;
 }
-.bet{
+.bet {
     height: 60px;
 }
+.boxes {
+    height: 300px;
+    width: 545px;
+    position: relative;
+}
+.boxes img {
+    position: absolute;
+}
 button:focus {outline:0;}
-.button{
+.button {
     width:200px;
     display: inline-block;
     padding: 15px 25px;
@@ -28,15 +35,43 @@ button:focus {outline:0;}
     border-radius: 15px;
     margin: 3px;
 }
-
 .button:active {
   box-shadow: 0 3px #666;
   transform: translateY(4px);
 }
-#dealer{
+.card-1 {
+    top: 0px;
+    left: 60px;
+}
+.card-2 {
+    z-index: 1;
+    left: 120px;
+}
+.card-3 {
+    z-index: 2;
+    left: 160px;
+}
+.card-4 {
+    z-index: 3;
+    left: 200px;
+}
+.card-5 {
+    z-index: 4;
+    left: 240px;
+}
+.card-6 {
+    z-index: 5;
+    left: 280px;
+}
+#deck-back {
+    height: 300px;
+    margin:  20px;
+    border-radius: 15px;
+}
+#dealer {
     margin-bottom: 120px;
 }
-#deal-count{
+#deal-count {
     border: 3px solid black;
     border-radius: 3px;
     margin: 5px 220px;
@@ -49,24 +84,26 @@ button:focus {outline:0;}
     padding: 10px;
 }
 .message {
+    margin-top: 20px;
     text-decoration: underline;
-
 }
-#decks{
+#decks {
     height: 650px;
 }
-#title{
+#title {
     padding: 8px 25px;
     border: darkslategrey solid 3px;
     border-radius: 1rem;
 }
-
-#instructions{
+#instructions {
     font-size: 1.3rem;
     border-bottom: darkslategrey solid 3px;
 
 }
-
-span{
+.shuffle {
+    color: gold;
+    border: greenyellow dashed 3px;
+}
+span {
     text-decoration: underline;
 }

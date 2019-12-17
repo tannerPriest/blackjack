@@ -25,19 +25,25 @@
         </div>
     </section>
     <!-- Need to Display the deck of cards and make a spot for the players cards and the dealers cards to compare-->
-        <div id='decks' class='d-flex justify-content-space-between'>
+        <div class='d-flex justify-content-space-between'>
 
             <!-- PLAYER COLUMN -->
             <div class='container d-flex flex-column justify-content-between text-center'>
                 <div class="d-flex justify-content-center">
                     <h3>PLAYER</h3>
                 </div>
-                <div class="d-flex justify-content-center flex-column">
-
                     <!-- PLAYER CARDS -->
-                    <div class="d-flex justify-content-center flex-md-fill">
-                        <img id="play-1" src="/playingCards/backImage.webp" alt="Responsive image">
-                        <img id="play-2" src="/playingCards/backImage.webp" alt="Responsive image">
+                <div class="d-flex justify-content-center flex-column">
+                    <div class="boxes flex-md-fill">
+                        <img id="play-1" class="card-1" src="/playingCards/backImage.webp" alt="Responsive image">
+                        <img id="play-2" class="card-2" src="/playingCards/backImage.webp" alt="Responsive image">
+                        <img id="play-3" class="card-3 " src="/playingCards/backImage.webp" alt="Responsive image">
+                        <img id="play-4" class="card-4 " src="/playingCards/backImage.webp" alt="Responsive image">
+                        <img id="play-5" class="card-5 " src="/playingCards/backImage.webp" alt="Responsive image">
+                        <img id="play-6" class="card-6 " src="/playingCards/backImage.webp" alt="Responsive image">
+                        <!-- <img id="play-4" src="/playingCards/backImage.webp" alt="Responsive image">
+                        <img id="play-5" src="/playingCards/backImage.webp" alt="Responsive image">
+                        <img id="play-6" src="/playingCards/backImage.webp" alt="Responsive image"> -->
                     </div>
                     <h3 id='play-mess' class="message">MAKE YOUR BET!</h3>
                     <h3 id="play-count"><strong>0</strong></h3>
@@ -51,11 +57,10 @@
                     </div>     
                 </div>
             </div>
-
             <!-- div containing MAIN DECK COLUMN -->
             <div class='container d-flex flex-column justify-content-between'>
                 <div class="d-flex justify-content-center">
-                    <img src="/playingCards/backImage.webp" alt="Responsive image">
+                    <img id="deck-back" src="/playingCards/backImage.webp" alt="Responsive image">
                 </div>
                 <div class="d-flex justify-content-center bet">
                     <button id="bet5" class="button btn btn-large btn-info">BET $5</button>
@@ -72,10 +77,9 @@
                 </div>
                 <!-- DEALER CARDS, WIN/BUST/LOSE MESSAGE AND TOTAL -->
                 <div id="dealer" class="d-flex justify-content-center flex-column">
-                    <div class="d-flex justify-content-center flex-column">
-                    <div class="d-flex justify-content-center">
-                            <img id="deal-1" src="/playingCards/backImage.webp" alt="Responsive image">
-                            <img id="deal-2" src="/playingCards/backImage.webp" alt="Responsive image">
+                    <div class="boxes">
+                            <img id="deal-1" class="card-1" src="/playingCards/backImage.webp" alt="Responsive image">
+                            <img id="deal-2" class="card-2" src="/playingCards/backImage.webp" alt="Responsive image">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                         <h3 id='deal-mess' class="message">DEALER HAND</h3>
