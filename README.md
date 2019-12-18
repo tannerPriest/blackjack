@@ -6,7 +6,7 @@
 ---
 ## Screenshots
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Title Screen")
+![alt text](https://github.com/killerwhiteshark/blackjack/blob/master/gameScreenShots/titleScreenshot.png?raw=true "Title Screen")
 
 
 
