@@ -8,7 +8,11 @@
 
 ![alt text](https://github.com/killerwhiteshark/blackjack/blob/master/gameScreenShots/titleScreenshot.png?raw=true "Title Screen")
 
+![alt text](https://github.com/killerwhiteshark/blackjack/blob/master/gameScreenShots/playerWin.png?raw=true "Player wins!")
 
+![alt text](https://github.com/killerwhiteshark/blackjack/blob/master/gameScreenShots/playerTurn.png?raw=true "Player in turn")
+
+![alt text](https://github.com/killerwhiteshark/blackjack/blob/master/gameScreenShots/dealerWin.png?raw=true "Player busts, Dealer wins!")
 
 ---- 
 ## WireFrames
