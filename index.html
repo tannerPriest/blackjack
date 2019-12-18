@@ -11,28 +11,22 @@
 </head>
 <body>
     <section class='container'>
-        <!-- Title goes here -->
         <div class='d-flex justify-content-center'>
             <div  id='title' class='d-inline-flex jumbotron'>
                 <h1>Give me BlackJack!</h1>
             </div>
         </div>
-        <!-- Make instructions and basic objectives to the game  -->
         <div class='d-flex justify-content-center'>
             <div id='instructions' class='d-inline-flex'>
                 <p class='text-center'>Press either of the <span>BET</span> buttons to start the game. You can decide between betting $5 or $10. After start, the dealer will give you <span>2 cards</span>. Your objective is to have both of your cards values as close as equal to 21 or be greater than the <span>Dealers</span> cards. If you want to add another card to increase you value, press the <span>HIT</span> button to be delt another card, but be careful because if you go over 21, you lose immediately!!! </p>
             </div>
         </div>
     </section>
-    <!-- Need to Display the deck of cards and make a spot for the players cards and the dealers cards to compare-->
         <div class='d-flex justify-content-space-between'>
-
-            <!-- PLAYER COLUMN -->
             <div class='container d-flex flex-column justify-content-between text-center'>
                 <div class="d-flex justify-content-center">
                     <h3>PLAYER</h3>
                 </div>
-                    <!-- PLAYER CARDS -->
                 <div class="d-flex justify-content-center flex-column">
                     <div class="boxes flex-md-fill">
                         <img id="play-1" class="card-1" src="/playingCards/backImage.webp" alt="Responsive image">
@@ -54,7 +48,6 @@
                     </div>     
                 </div>
             </div>
-            <!-- div containing MAIN DECK COLUMN -->
             <div class='container d-flex flex-column justify-content-between'>
                 <div class="d-flex justify-content-center">
                     <img id="deck-back" src="/playingCards/backImage.webp" alt="Responsive image">
@@ -66,13 +59,10 @@
                 <h3>CURRENT BET: <span id="bet-amount"></span></h3>
                 <h3 class="d-flex justify-content-center">CHIPS REMAINING: <span id="balance">$100</span></h3>
             </div>
-
-             <!-- div containing DEALER COLUMN -->
             <div class='container d-flex flex-column justify-content-between text-center'>
                 <div>
                     <h3>DEALER</h3>
                 </div>
-                <!-- DEALER CARDS, WIN/BUST/LOSE MESSAGE AND TOTAL -->
                 <div id="dealer" class="d-flex justify-content-center flex-column">
                     <div class="boxes">
                             <img id="deal-1" class="card-1" src="/playingCards/backImage.webp" alt="Responsive image">

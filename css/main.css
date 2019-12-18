@@ -63,6 +63,14 @@ button:focus {outline:0;}
     z-index: 5;
     left: 280px;
 }
+.message {
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.shuffle {
+    color: gold;
+    border: greenyellow dashed 3px;
+}
 #deck-back {
     height: 300px;
     margin:  20px;
@@ -83,10 +91,6 @@ button:focus {outline:0;}
     margin: 5px 220px;
     padding: 10px;
 }
-.message {
-    margin-top: 20px;
-    text-decoration: underline;
-}
 #decks {
     height: 650px;
 }
@@ -99,10 +103,6 @@ button:focus {outline:0;}
     font-size: 1.3rem;
     border-bottom: darkslategrey solid 3px;
 
-}
-.shuffle {
-    color: gold;
-    border: greenyellow dashed 3px;
 }
 span {
     text-decoration: underline;
