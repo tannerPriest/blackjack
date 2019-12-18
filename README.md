@@ -1,7 +1,14 @@
-# blackjack
- ### General Assembly Project 1 - BlackJack
+# Blackjack
+ ### General Assembly Project 1 - Blackjack
 
 - A web browser based game of the card game Black Jack built from HTML, CSS, and Javascript.
+
+---
+## Screenshots
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Title Screen")
+
+
 
 ---- 
 ## WireFrames
@@ -11,7 +18,6 @@
 ---
 
 ## Game Logic
----
 
 - Composed of 4 buttons, all of the event listeners are at below of the const and let variables in the JS file. 
 - All DOM selectors are in const variables.
