@@ -3,7 +3,7 @@
 
 - A web browser based game of the card game Black Jack built from HTML, CSS, and Javascript.
 
-[BlackJack game launched with Netlify](https://github.com/killerwhiteshark/blackjack)
+[BlackJack game launched with Netlify](https://stupefied-jones-c2bbe0.netlify.com/)
 
 ---
 ## Screenshots
