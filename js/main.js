@@ -441,7 +441,7 @@ function compareHands(){
         playMessage.textContent = 'YOU WIN THIS HAND! DEALER BUST!';
         window.setTimeout(newHand, 3500)
     } else if(playerAdd > dealerAdd){
-        balance += currentBet * 2.5;
+        balance += currentBet * 2;
         playMessage.textContent = 'YOU WIN THIS HAND!';
         render();
         window.setTimeout(newHand, 3500)
