@@ -39,4 +39,4 @@
 
 - Computer Dealer is built to hit if dealer hand is below 17. 
 
-- Aces are recgonized and auto changed if it is in the players hands insterest to staying below 21. 
+- Aces are recgonized as 11 and auto changed to 1 if it is in the players hands insterest to staying below 21. 

@@ -312,13 +312,13 @@ function blackJack(){
         if(playerTotal[0] === 10 || playerTotal[1] === 10){
             playMessage.textContent = "BLACKJACK!!!!"
             balance += currentBet * 2.5;
-            window.setTimeout(newHand, 3000)
+            window.setTimeout(newHand, 3500)
             render();
         }
     } else {
         playMessage.textContent = "21!!! YOU WIN!"
         balance += currentBet * 2;
-        window.setTimeout(newHand, 3000)
+        window.setTimeout(newHand, 3500)
         render();  
     }
 }
@@ -359,7 +359,7 @@ function playerTurn(){
             stayB.disabled = true;
             hitB.disabled = true;
             playMessage.textContent = 'BUST! MAKE YOUR NEXT BET.';
-         window.setTimeout(newHand, 2500)
+         window.setTimeout(newHand, 3500)
             render();
             return;  
         }
@@ -433,22 +433,22 @@ function compareHands(){
     if(playerAdd === dealerAdd){
         balance += currentBet;
         playMessage.textContent = 'PUSH!'
-        window.setTimeout(newHand, 3000)
+        window.setTimeout(newHand, 3500)
     }
     if(dealerAdd > 21){
         balance += currentBet * 2;
         render();
         playMessage.textContent = 'YOU WIN THIS HAND! DEALER BUST!';
-        window.setTimeout(newHand, 3000)
+        window.setTimeout(newHand, 3500)
     } else if(playerAdd > dealerAdd){
         balance += currentBet * 2.5;
         playMessage.textContent = 'YOU WIN THIS HAND!';
         render();
-        window.setTimeout(newHand, 3000)
+        window.setTimeout(newHand, 3500)
     } else if(dealerAdd > playerAdd){
         playMessage.textContent = 'DEALER WINS THIS HAND!';
         render();
-        window.setTimeout(newHand, 3000)
+        window.setTimeout(newHand, 3500)
     }
 }
 function shuffle (){
@@ -671,7 +671,7 @@ function shuffle (){
         }
     ];
     deckArray = deck.sort(() => Math.random() - 0.5);
-    window.setTimeout(newHand, 2000);
+    window.setTimeout(newHand, 3500);
 };
 function render(){
     playerAdd = playerTotal.reduce((a, b) => a + b, 0);
