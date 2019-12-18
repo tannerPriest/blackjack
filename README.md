@@ -19,10 +19,14 @@
 ---- 
 ## WireFrames
 
-- Bootstrap v4
+- Bootstrap v4, JavaScript, HTML, and CSS.
 
 ---
+## Instuctions and game rules.
 
+- This game of Blackjack only uses one deck. The user is the only player and the dealer is the only opponent. The dealer does deal one card at a time to player then dealer. You are reduced to only allowed to bet $5 and $10 for simplicity. You start with $100. If you are delt 21 or blackjack, the hand ends and you are awarded your winnings accordingly. If you click the hit button, you are delt a new card and your value is increased. But if your new card pushes your total value over 21, you loose your bet. If you stay with your current hand, the dealer flips its second card and continues to hit if dealers total amount is equal too or less than 16. If either go over 21, that player busts. If you get an Ace and a card valued to ten first deal, you win 1.5 to 1 your bet made. Cards are reshuffled after deck goes below 25 cards.  
+
+---
 ## Game Logic
 
 - Composed of 4 buttons, all of the event listeners are at below of the const and let variables in the JS file. 
@@ -42,3 +46,12 @@
 - Computer Dealer is built to hit if dealer hand is below 17. 
 
 - Aces are recgonized as 11 and auto changed to 1 if it is in the players hands insterest to staying below 21. 
+
+---
+## Next Steps
+
+- Adding a split function. Manipulating the DOM and have a place to compare and add cards to split hands. 
+
+- Adding Double Down feature for more game play options. 
+
+- Update and change visual effects, looks and feel of the page. 
