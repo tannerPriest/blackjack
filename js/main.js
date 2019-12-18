@@ -1,5 +1,5 @@
 
-let deck = [
+var deck = [
     {
         value: 2,
         image: 'playingCards/2C.jpg'
@@ -252,14 +252,17 @@ betTen.addEventListener("click", function(){
 hitB.addEventListener('click', hitHandler);
 stayB.addEventListener('click', stayHandler);
 function hitHandler(){
-    var x = deckArray.pop()
-    playTwo.src = x.image;
+    var x = deck.pop()
     if(x.value === 11 && playerAdd < 11){
         x.value = 1;
     }
     playerHand.push(x);
     playerTotal.push(x.value);
     playerAdd = playerTotal.reduce((a, b) => a + b, 0);
+    for(let i = 2; i < playerHand.length; i++){
+        document.querySelector(`#play-${i + 1}`).src = playerHand[i].image;
+        document.querySelector(`#play-${i + 1}`).classList.remove('d-none');
+    }
     playerTurn();
 };
 function stayHandler(){
@@ -283,7 +286,7 @@ function checkBalance(betAmount){
 }
 function checkForTwentyOne(){
     for(let i = 0; i < 4; i++){
-        var x = deckArray.pop()
+        var x = deck.pop()
         if(i % 2 === 0){
             playerHand.push(x);
             playerTotal.push(x.value);
@@ -311,11 +314,13 @@ function checkForTwentyOne(){
 }
 function blackJack(){
     playCounter.textContent = playerAdd;
-    if(playerHand[0] === 11 || playerHand[1] === 11){
+    if(playerTotal[0] === 11 || playerTotal[1] === 11){
+        if(playerTotal[0] === 10 || playerTotal[1] === 10){
             playMessage.textContent = "BLACKJACK!!!!"
             balance += currentBet * 2.5;
             window.setTimeout(newHand, 3000)
             render();
+        }
     } else {
         playMessage.textContent = "21!!! YOU WIN!"
         balance += currentBet * 2;
@@ -346,6 +351,12 @@ function newHand(){
     hitB.disabled = true;
     betFive.disabled = false;
     betTen.disabled = false;
+    for(let i = 2; i < playerHand.length; i++){
+        document.querySelector(`#play-${i + 1}`).classList.add('d-none');
+    }
+    for(let i = 2; i < dealerHand.length; i++){
+        document.querySelector(`#deal-${i + 1}`).classList.add('d-none');
+    }
     playerHand = [];
     dealerHand = [];
     playerTotal = [];
@@ -370,7 +381,7 @@ function playerTurn(){
         playMessage.textContent = 'HIT OR STAY? MAKE MY DAY.'
         render();
         return;
-    } else{ 
+    } else{
         let doesHaveAce = false;
         for(let i = 0; i < playerTotal.length; i++){
             if(playerTotal[i] === 11 && playerAdd > 21){
@@ -382,6 +393,8 @@ function playerTurn(){
             render();
             return;
         } else {
+            dealerTwo.src = dealerHand[1].image;
+            dealerAdd = dealerTotal.reduce((a, b) => a + b, 0);
             stayB.disabled = true;
             hitB.disabled = true;
             playMessage.textContent = 'BUST! MAKE YOUR NEXT BET.';
@@ -394,10 +407,25 @@ function playerTurn(){
 function dealerTurn () {
         dealerAdd = dealerTotal.reduce((a, b) => a + b, 0);
         if( dealerAdd < 17){
-            let x = deckArray.pop();
+            let x = deck.pop();
+            let doesHaveAce = false;
             dealerHand.push(x);
             dealerTotal.push(x.value);
             dealerAdd = dealerTotal.reduce((a, b) => a + b, 0);
+            for(let i = 2; i < dealerHand.length; i++){
+                document.querySelector(`#deal-${i + 1}`).src = dealerHand[i].image;
+                document.querySelector(`#deal-${i + 1}`).classList.remove('d-none');
+            }
+            for(let i = 0; i < dealerTotal.length; i++){
+                if(dealerTotal[i] === 11 && dealerAdd > 21){
+                dealerTotal[i] = 1;
+                doesHaveAce = true;
+                }
+            }
+            if(doesHaveAce === true){
+                dealerTurn();
+                return;
+            }
             dealerTurn();
         } else {
             compareHands();
@@ -406,8 +434,6 @@ function dealerTurn () {
 function compareHands(){
     playerAdd = playerTotal.reduce((a, b) => a + b, 0);
     dealerAdd = dealerTotal.reduce((a, b) => a + b, 0);
-    let lastDeal = dealerHand[dealerHand.length-1].image;
-    dealerTwo.src = lastDeal;
     stayB.disabled = true;
     hitB.disabled = true;
     if(playerAdd === dealerAdd){
@@ -432,9 +458,10 @@ function compareHands(){
     }
 }
 function shuffle (){
+    betFive.disabled = true;
+    betTen.disabled = true;
     playMessage.classList.add("shuffle");
     playMessage.textContent = 'RESHUFFLING DECK.'
-    deck = [];
     deck = [
         {
             value: 2,
@@ -649,6 +676,7 @@ function shuffle (){
             image: 'playingCards/QS.jpg'
         }
     ];
+    deckArray = deck.sort(() => Math.random() - 0.5);
     window.setTimeout(newHand, 2000);
 };
 function render(){
