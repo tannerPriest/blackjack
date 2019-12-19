@@ -17,7 +17,7 @@
 ![alt text](https://github.com/killerwhiteshark/blackjack/blob/master/gameScreenShots/dealerWin.png?raw=true "Player busts, Dealer wins!")
 
 ---- 
-## WireFrames
+## Technologies Used
 
 - Bootstrap v4, JavaScript, HTML, and CSS.
 
